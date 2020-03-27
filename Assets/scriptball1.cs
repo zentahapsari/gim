@@ -7,7 +7,7 @@ public class scriptball1 : MonoBehaviour
     public int speed = 30;
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         GetComponent<Rigidbody2D>().velocity = new Vector2 (2,1)*speed;
     }
 
@@ -19,8 +19,22 @@ public class scriptball1 : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         if(other.collider.name=="DindingKanan"||other.collider.name=="DindingKiri"){
-            GetComponent<Transform>().position = new Vector2 (0,0);
-        }    
+            StartCoroutine(jedabola());
+            // GetComponent<Transform>().position = new Vector2 (0,0);
+            
+        }
+    }
+
+   
+
+
+    // perintah
+    IEnumerator jedabola() {
+    GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    GetComponent<Transform>().position = new Vector2 (0,0);
+    yield return new WaitForSeconds(3);
+    Start();
+    
     }
     
 }

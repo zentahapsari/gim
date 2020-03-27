@@ -53,9 +53,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GameOverScript.cs" />
      <Compile Include="Assets\kananscript.cs" />
      <Compile Include="Assets\kiriscript.cs" />
      <Compile Include="Assets\scriptball1.cs" />
+     <Compile Include="Assets\TimerScript.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Bintang/Pong lagi/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
