@@ -56,6 +56,7 @@
      <Compile Include="Assets\GameOverScript.cs" />
      <Compile Include="Assets\kananscript.cs" />
      <Compile Include="Assets\kiriscript.cs" />
+     <Compile Include="Assets\Navigasi.cs" />
      <Compile Include="Assets\scriptball1.cs" />
      <Compile Include="Assets\TimerScript.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
