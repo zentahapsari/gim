@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/HalamanUtama.unity
+    path: Assets/Scenes/HalamanUtama.unity
     guid: 154ca7c65c1b8d84c917ee804fa5782b
   - enabled: 1
-    path: Assets/HalamanGame.unity
+    path: Assets/Scenes/HalamanGame.unity
     guid: 3155c7c1039d18c4cadc79b6551fe701
+  - enabled: 1
+    path: Assets/Scenes/HalamanEnd.unity
+    guid: dda883016c231eb4d849090b52f263c6
   m_configObjects: {}
