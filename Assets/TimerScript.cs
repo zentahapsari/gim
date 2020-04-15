@@ -9,6 +9,8 @@ public class TimerScript : MonoBehaviour
     // Start is called before the first frame update
     public int counter = 30; //variable counter
     public string gameOver = "Game Over!";
+    public Text winnerP1;
+    public Text winnerP2;
     public Text timerText;
     void Start()
     {
@@ -32,6 +34,7 @@ public class TimerScript : MonoBehaviour
         // timerText.text = gameOver.ToString();    
         // }
         }
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene("HalamanEnd");
     }
 

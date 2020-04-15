@@ -5,20 +5,26 @@ using UnityEngine.UI;
 
 public class scriptball1 : MonoBehaviour
 {
-    public int speed = 30;
+    // public int speed = 30;
     // public int counter = 0;
-    public int counterP1 = 0;
-    public int counterP2 = 0;
+    public static int counterP1 = 0; // ternyata dengan menambahkan static ketika game di play sekali dalam unity,
+                                    // lalu di sediakan tombol mulai lagi di ending scene
+                                    // yang terjadi ketika tombol mulai lagi diklik yaitu, scorenya tidak mulai dari nol
+                                    // dan malah melanjutkan total score di permainan sebelumnya.
+    public static int counterP2 = 0;
     public Text scoreText1;
-     public Text scoreText2;
+    public Text scoreText2;
     public Rigidbody2D sesuatu;
     public Animator animtr;
     
     // Start is called before the first frame update
     void Start()
     { 
-        // scoreText.text = counter.ToString();
-        sesuatu.velocity = new Vector2 (-1,-1)*speed;
+        int x = Random.Range(0,2)*2 - 1; //nilai x bisa bernilai -1 atau 1
+        int y = Random.Range(0,2)*2 - 1; //nilai x bisa bernilai -1 atau 1
+        int speed = Random.Range(20,26); // nilai speed antara so sampai 25
+        sesuatu.velocity = new Vector2 (x,y)*speed;
+        sesuatu.GetComponent<Transform>().position = Vector2.zero;
         animtr.SetBool("IsMove",true);
     }
 
@@ -48,8 +54,13 @@ public class scriptball1 : MonoBehaviour
     sesuatu.GetComponent<Transform>().position = Vector2.zero;
     counterP1++;
     scoreText1.text = counterP1.ToString();
+
     yield return new WaitForSeconds(3);
-    sesuatu.velocity = new Vector2 (-1,-1)*speed;
+
+    int x = Random.Range(0,2)*2 - 1;
+    int y = Random.Range(0,2)*2 - 1;
+    int speed = Random.Range(20,26); // nilai speed antara so sampai 25
+    sesuatu.velocity = new Vector2 (x,y)*speed;
     animtr.SetBool("IsMove",true);
     
     }
@@ -60,8 +71,13 @@ public class scriptball1 : MonoBehaviour
     sesuatu.GetComponent<Transform>().position = Vector2.zero;
     counterP2++;
     scoreText2.text = counterP2.ToString();
+
     yield return new WaitForSeconds(3);
-    sesuatu.velocity = new Vector2 (-1,-1)*speed;
+    
+    int x = Random.Range(0,2)*2 - 1;
+    int y = Random.Range(0,2)*2 - 1;
+    int speed = Random.Range(20,26); // nilai speed antara so sampai 25
+    sesuatu.velocity = new Vector2 (x,y)*speed;
     animtr.SetBool("IsMove",true);
     
     }

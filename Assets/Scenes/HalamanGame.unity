@@ -894,8 +894,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa5111b738479c468e846d6672ed253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  counter: 10
+  counter: 30
   gameOver: Game Over!
+  winnerP1: {fileID: 0}
+  winnerP2: {fileID: 0}
   timerText: {fileID: 727059754}
 --- !u!114 &727059754
 MonoBehaviour:
@@ -1523,7 +1525,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1854103855
 RectTransform:
@@ -1769,12 +1771,12 @@ PrefabInstance:
     - target: {fileID: 2085272580275455722, guid: 1eed370d2c9f9e647b1106d72771ec40,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2085272580275455722, guid: 1eed370d2c9f9e647b1106d72771ec40,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2085272580275455722, guid: 1eed370d2c9f9e647b1106d72771ec40,
         type: 3}
