@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class scriptball1 : MonoBehaviour
 {
+    public AudioSource myFX;
     // public int speed = 30;
     // public int counter = 0;
     public static int counterP1 = 0; // ternyata dengan menambahkan static ketika game di play sekali dalam unity,
@@ -41,9 +42,13 @@ public class scriptball1 : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other) {
         if(other.collider.name=="DindingKanan"){
             StartCoroutine(jedabolaP1());
+            
             // GetComponent<Transform>().position = new Vector2 (0,0);
         } if (other.collider.name=="DindingKiri"){
             StartCoroutine(jedabolaP2());
+        }
+        if(other.collider.tag == "Player"){
+            myFX.Play();
         }
     }
 
